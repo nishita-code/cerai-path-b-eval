@@ -1,0 +1,17 @@
+{
+  "name": "cerai-path-b-eval",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Option B submission: critique of CeRAI AIEvaluationTool and a minimal conversational endpoint evaluator.",
+  "type": "module",
+  "scripts": {
+    "bot": "node src/civic-bot-server.js",
+    "eval": "node src/evaluator.js",
+    "report": "node src/render-report.js",
+    "report:serve": "node src/report-server.js",
+    "all": "node src/evaluator.js && node src/render-report.js"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
