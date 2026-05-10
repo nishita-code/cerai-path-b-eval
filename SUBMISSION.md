@@ -10,11 +10,11 @@ https://nishita-code.github.io/cerai-path-b-eval/
 
 ## Path Chosen
 
-I chose Option B because CeRAI AIEvaluationTool's documented API evaluation path contains a reproducible bug that can prevent valid API responses from being stored and analyzed reliably. The core issue is in the testcase executor: API responses are normalized into text but later handled as if they were legacy list/dict payloads. I documented the bug and related limitations, prepared an upstream fix, and implemented a minimal alternative evaluator that sends text prompts to a conversational endpoint and scores accuracy, safety, and user-experience behavior with transparent, reproducible rules.
+I chose Option B after assessing CeRAI as an end-to-end conversational AI evaluation platform with data management, endpoint execution, strategy-based analysis, and reporting. The tool already supports API, WhatsApp, and web targets, but I found that the API endpoint path was not yet robust enough for generic reproducible endpoint evaluation: valid API responses could be mishandled by the testcase executor, alternate config usage was fragile, and support for arbitrary HTTP chat APIs was limited. I documented these findings through upstream issues, opened a targeted PR for the response-handling bug, and implemented a minimal alternative evaluator to demonstrate the core API evaluation loop: send text inputs to a conversational endpoint, assess responses across accuracy/safety/UX rules, and produce machine-readable results plus a self-contained report.
 
 ## AI Use
 
-AI assistance was used to create the CivicInfoBot demo endpoint, design the evaluation test suite, debug the evaluator, and generate the self-contained report. I chose a local deterministic bot so the alternative evaluator could be demonstrated reproducibly without external API keys, authentication, or rate limits.
+AI assistance was used as a support tool to make the work clearer and more polished. It helped with wording, organizing the critique, improving the README/report structure, and debugging parts of the demo workflow. The assessment, issue selection, code review decisions, corrections, and final submission direction were driven and reviewed by me.
 
 ## Upstream Links
 
