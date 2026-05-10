@@ -2,7 +2,7 @@
 
 ## Repository URL
 
-TODO: add public GitHub repository URL after push.
+https://github.com/NiShITa-code/cerai-path-b-eval
 
 ## Live Endpoint URL
 
@@ -18,7 +18,7 @@ AI assistance was used to inspect the CeRAI documentation and source, identify w
 
 ## Upstream Links
 
-- TODO: main bug issue URL
-- TODO: PR URL
-- Optional related issue: config path ignored
-- Optional enhancement issue: generic HTTP API adapter
+- Main bug issue: https://github.com/cerai-iitm/AIEvaluationTool/issues/145
+- Pull request: https://github.com/cerai-iitm/AIEvaluationTool/pull/146
+- Optional related issue draft: config path ignored
+- Optional enhancement issue draft: generic HTTP API adapter

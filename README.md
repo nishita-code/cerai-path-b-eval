@@ -2,7 +2,7 @@
 
 This repository follows **Option B - Critique & Rebuild**.
 
-I chose this path because the CeRAI AIEvaluationTool v2.0 API flow contains defects that make documented API endpoint evaluation unreliable without local code changes. The strongest finding is that valid API responses are normalized to text but later treated as legacy list/dict payloads in the testcase executor, so runs can fail or store no usable response.
+I chose this path because the CeRAI AIEvaluationTool v2.0 API flow contains defects that make documented API endpoint evaluation unreliable without local code changes. The strongest finding is that valid API responses are normalized to text but later treated as legacy list/dict payloads in the testcase executor, so runs can fail or store no usable response. This is filed upstream as [Issue #145](https://github.com/cerai-iitm/AIEvaluationTool/issues/145), with a targeted fix proposed in [PR #146](https://github.com/cerai-iitm/AIEvaluationTool/pull/146).
 
 ## Contents
 
@@ -43,16 +43,12 @@ $env:CHAT_ENDPOINT="http://localhost:9100/chat"
 npm run eval
 ```
 
-## Posting the Upstream Issues
+## Upstream Issue and PR
 
-The local GitHub CLI token on this machine is invalid, so I could not post issues automatically. After authenticating, each issue draft can be filed with:
+- Filed bug: [API mode mishandles valid response text in testcase executor](https://github.com/cerai-iitm/AIEvaluationTool/issues/145)
+- Pull request: [Fix API response handling in testcase executor](https://github.com/cerai-iitm/AIEvaluationTool/pull/146)
 
-```powershell
-gh auth login -h github.com
-gh issue create --repo cerai-iitm/AIEvaluationTool --title "API mode stores valid responses incorrectly or fails execution" --body-file issues/001-api-mode-response-shape-breaks-execution.md
-gh issue create --repo cerai-iitm/AIEvaluationTool --title "Testcase executor ignores the supplied config path" --body-file issues/002-config-argument-is-ignored-by-executor.md
-gh issue create --repo cerai-iitm/AIEvaluationTool --title "API target support is limited to provider-specific chat clients" --body-file issues/003-api-target-support-is-too-narrow.md
-```
+Additional draft issues remain in `issues/` for the config-path bug and generic HTTP adapter enhancement.
 
 ## Local CeRAI Fix
 

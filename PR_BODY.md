@@ -2,6 +2,8 @@
 
 Fixes API response handling in the testcase executor so valid normalized API responses are not treated as legacy list/dict payloads.
 
+Fixes cerai-iitm/AIEvaluationTool#145.
+
 ## Problem
 
 The Interface Manager API path returns normalized response text. The testcase executor then checks and stores `agent_response` as if it were still a legacy list/dict response object, which can cause successful API calls to be marked failed or stored incorrectly.
