@@ -14,7 +14,7 @@ I chose Option B because CeRAI AIEvaluationTool's documented API evaluation path
 
 ## AI Use
 
-AI assistance was used to inspect the CeRAI documentation and source, identify whether the API execution failure was a bug or enhancement, search upstream issues for duplicates, draft issue and PR text, and implement the minimal evaluator/reporting workflow. The main course correction was switching from Option A to Option B after finding that the documented API path could not be trusted without a code fix. I then narrowed the rebuild to a transparent local endpoint and evaluator rather than attempting to recreate the full CeRAI platform.
+AI assistance was used to create the CivicInfoBot demo endpoint, design the evaluation test suite, debug the evaluator, and generate the self-contained report. I chose a local deterministic bot so the alternative evaluator could be demonstrated reproducibly without external API keys, authentication, or rate limits.
 
 ## Upstream Links
 
