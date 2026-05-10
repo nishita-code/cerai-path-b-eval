@@ -6,7 +6,7 @@ https://github.com/NiShITa-code/cerai-path-b-eval
 
 ## Live Endpoint URL
 
-TODO: add GitHub Pages / deployment URL after publishing `docs/index.html`.
+https://nishita-code.github.io/cerai-path-b-eval/
 
 ## Path Chosen
 
