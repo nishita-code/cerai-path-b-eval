@@ -46,9 +46,9 @@ npm run eval
 ## Upstream Issue and PR
 
 - Filed bug: [API mode mishandles valid response text in testcase executor](https://github.com/cerai-iitm/AIEvaluationTool/issues/145)
+- Filed bug: [Testcase executor ignores the supplied config path](https://github.com/cerai-iitm/AIEvaluationTool/issues/147)
+- Filed enhancement: [API target support is limited to provider-specific chat clients](https://github.com/cerai-iitm/AIEvaluationTool/issues/148)
 - Pull request: [Fix API response handling in testcase executor](https://github.com/cerai-iitm/AIEvaluationTool/pull/146)
-
-Additional draft issues remain in `issues/` for the config-path bug and generic HTTP adapter enhancement.
 
 ## Local CeRAI Fix
 

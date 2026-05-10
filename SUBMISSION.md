@@ -19,6 +19,6 @@ AI assistance was used to inspect the CeRAI documentation and source, identify w
 ## Upstream Links
 
 - Main bug issue: https://github.com/cerai-iitm/AIEvaluationTool/issues/145
+- Config-path bug issue: https://github.com/cerai-iitm/AIEvaluationTool/issues/147
+- Generic API adapter enhancement issue: https://github.com/cerai-iitm/AIEvaluationTool/issues/148
 - Pull request: https://github.com/cerai-iitm/AIEvaluationTool/pull/146
-- Optional related issue draft: config path ignored
-- Optional enhancement issue draft: generic HTTP API adapter

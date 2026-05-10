@@ -7,9 +7,9 @@ const report = JSON.parse(await fs.readFile(resultsPath, "utf8"));
 
 const issueLinks = [
   ["Issue #145: API response-shape bug", "https://github.com/cerai-iitm/AIEvaluationTool/issues/145"],
+  ["Issue #147: config argument ignored", "https://github.com/cerai-iitm/AIEvaluationTool/issues/147"],
+  ["Issue #148: generic API adapter support", "https://github.com/cerai-iitm/AIEvaluationTool/issues/148"],
   ["PR #146: executor fix", "https://github.com/cerai-iitm/AIEvaluationTool/pull/146"],
-  ["Draft: config argument ignored", "../issues/002-config-argument-is-ignored-by-executor.md"],
-  ["Draft: generic API adapter", "../issues/003-api-target-support-is-too-narrow.md"]
 ];
 
 const rows = report.results.map(item => `
@@ -140,7 +140,7 @@ const html = `<!doctype html>
 
     <h2>What Was Broken or Insufficient</h2>
     <p>The most severe defect is in the testcase executor response handling. The interface manager returns normalized text for API responses, but the executor continues to treat the value as a legacy list/dict payload. A valid response can therefore be interpreted as an error or fail while being stored. The repository also ignores the user-supplied config filename in the executor, and the API connector is limited to OpenAI, Gemini, or local OpenAI-compatible endpoints rather than arbitrary conversational HTTP APIs.</p>
-    <p>The primary bug is filed upstream as <a href="https://github.com/cerai-iitm/AIEvaluationTool/issues/145">Issue #145</a>, with a targeted fix proposed in <a href="https://github.com/cerai-iitm/AIEvaluationTool/pull/146">PR #146</a>. Additional issue drafts are included in <code>issues/</code> for the config-path bug and generic API adapter enhancement.</p>
+    <p>The primary bug is filed upstream as <a href="https://github.com/cerai-iitm/AIEvaluationTool/issues/145">Issue #145</a>, with a targeted fix proposed in <a href="https://github.com/cerai-iitm/AIEvaluationTool/pull/146">PR #146</a>. Related findings were also filed as <a href="https://github.com/cerai-iitm/AIEvaluationTool/issues/147">Issue #147</a> for the ignored config argument and <a href="https://github.com/cerai-iitm/AIEvaluationTool/issues/148">Issue #148</a> for generic API adapter support.</p>
 
     <h2>Alternative Design</h2>
     <p>The replacement evaluator is deliberately small: it reads a JSON test suite, sends each text prompt to a conversational endpoint, records latency and raw responses, then scores each answer using transparent metric-specific rules. This is less ambitious than CeRAI, but its behavior is reproducible, inspectable, and does not require database setup, Selenium, WhatsApp login, or external model keys.</p>
